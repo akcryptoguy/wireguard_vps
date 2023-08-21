@@ -4,7 +4,7 @@
 
 If you are looking for a common WireGuard install script that supports multi-client connections, i.e. multiple devices connect to the VPN at the same time, please visit [this repository](https://github.com/angristan/wireguard-install/) to continue.
 
-The script **Port Forwards** the local port `53`, `88`, `80`, `500`(4 ports for XBOX LIVE) and `1024-65000` to the corresponding ports on the server side. These ports covered most of the ports used by any games. **Please make sure that there is no other application using these ports on the server, otherwise It will deafen any application that listens to these ports.** I highly suggest running this script on an new empty system. 
+The script **Port Forwards** the local port `53`, `88`, `80`, `443`, `500`(4 ports for XBOX LIVE + 443) and `1024-65000` to the corresponding ports on the server side. These ports covered most of the ports used by any games. **Please make sure that there is no other application using these ports on the server, otherwise It will deafen any application that listens to these ports.** I highly suggest running this script on an new empty system. 
 
 Specifically, if the SSH port is inside the range, the script will automatically move it to port `65432` for not losing access to the server after installation.
 
@@ -76,7 +76,7 @@ Supported distributions:
 Download and execute the script. Answer the questions asked by the script and it will take care of the rest. For most VPS providers, you can just enter through all the questions.
 
 ```bash
-wget https://raw.githubusercontent.com/xiahualiu/wg_gaming_installer/main/wg-gaming-installer.sh 
+wget https://raw.githubusercontent.com/akcryptoguy/wireguard_vps/main/wg-gaming-installer.sh 
 bash ./wg-gaming-installer.sh
 ```
 
